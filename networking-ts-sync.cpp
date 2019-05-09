@@ -16,7 +16,7 @@ int main()
     net::connect(socket, resolver.resolve("ipecho.net", "http"));
 
     for(auto v : { "GET /plain HTTP/1.0\r\n"s
-                 , "Host: ipecho.net\n\n"s
+                 , "Host: ipecho.net\r\n"s
                  , "Accept: */*\r\n"s
                  , "Connection: close\r\n\r\n"s } )
     {
